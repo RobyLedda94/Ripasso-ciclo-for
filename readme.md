@@ -1,0 +1,1 @@
+Ripasso ciclo for e manipolazione del dom, verranno aggiunti altri esercizi snack
