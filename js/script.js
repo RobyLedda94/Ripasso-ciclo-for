@@ -99,6 +99,7 @@ generate_btn.addEventListener('click', function () {
         myList.appendChild(listItems); // appendiamo/aggiungiamo l'elemento creato alla variabile myList
         listItems.classList.add('list-unstyled');
         listItems.classList.add('p');
+        // console.log(listItems.classList);
 
 
         // all'interno del ciclo for alterniamo le classi css in base ai valori pari o dispati
@@ -111,9 +112,86 @@ generate_btn.addEventListener('click', function () {
             listItems.classList.add('odd');
         }
     }
+    // console.log(myList);
 });
 
 reset_btn.addEventListener('click', function () {
     myList.innerHTML = '';
-})
+});
+
+
+// // ES - 7 Ciclo e DOM
+
+// // recupero l'elemento con id grid dal DOM
+// let grid = document.getElementById('grid');
+
+// // variabile num per tenere traccia del numero corrente
+// let num = 1;
+
+// // Ciclo for per generare 10 le righe della griglia
+// for (let i = 1; i <= 10; i++) {
+//     // ciclo for annidato per generare le colonne della griglia
+//     for (let f = 1; f <= 10; f++) {
+//         // creazione di un elemento div per generare una cella
+//         let square = document.createElement('div');
+//         // aggiungo all'elemento creato la classe square
+//         square.classList.add('square');
+
+//         // con la proprietà innerText attraverso il template literal riporto il numero della variabile num che tiene traggia dei numeri
+
+
+//         // alla griglia recuperata in precedenza aggiungo gli elementi creati
+//         grid.appendChild(square);
+
+//         // istrzione condizionale operatore resto per distinguere i numeri pari e i numeri dispari
+//         if (i % 2 === 0) {
+
+//             if (f % 2 === 0) {
+//                 square.classList.add('red');
+//                 square.innerText = `${num}\n pari`;
+
+
+//             } else {
+//                 square.classList.add('blue');
+//                 square.innerText = `${num}\n dispari`;
+
+
+//             };
+//         } else {
+
+
+//             if (f % 2 === 0) {
+//                 square.classList.add('blue');
+//                 square.innerText = `${num}\n pari`;
+
+
+//             } else {
+//                 square.classList.add('red');
+//                 square.innerText = `${num}\n dispari`;
+
+//             };
+//         };
+//         // incremento la variabile num che riene traccia dei numeri
+//         num++;
+//     };
+// };
+
+// ES 8 - FizzBuzz
+
+// Con un ciclo for genero dei numeri da 1 a 100 compreso
+for (i = 1; i <= 100; i++) {
+    // condizione che stampa FizzBuzz per i numeri multipli di 3 e 5, utilizzato operatore logico && (AND) restituisce true se entrambi gli operatori sono veri
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`${i} FizzBuzz`);
+        // condizione che stampa Fizz per i multipli di 3
+    } else if (i % 3 === 0) {
+        console.log(`${i} Fizz`);
+        // condizione che stampa Fizz per i multipli di 5
+    } else if (i % 5 === 0) {
+        console.log(`${i} Buzz`);
+        // altrimenti stampa solo il numero se non soddisfa le precedenti condizioni
+    } else {
+        console.log(i);
+    }
+};
 

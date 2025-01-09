@@ -15,3 +15,26 @@
     background-color: #e0e0e0;
     color: #555;
 }
+
+.red {
+    background-color: rgba(255, 0, 0, 0.295);
+}
+
+.blue {
+    background-color: rgba(0, 0, 255, 0.295);
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+}
