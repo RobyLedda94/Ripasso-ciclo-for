@@ -178,6 +178,15 @@ reset_btn.addEventListener('click', function () {
 
 // ES 8 - FizzBuzz
 
+// recupero tutti gli elementi dal DOM utili per generare la griglia FizzBuzz
+
+// Bottone che genera la griglia
+let grid_generate_btn = document.getElementById('grid-start');
+// Bottone che resetta la griglia
+let grid_reset_btn = document.getElementById('grid-reset');
+// Elemento griglia che conterrà le celle per ogni numero
+let grid = document.getElementById('grid');
+
 // Con un ciclo for genero dei numeri da 1 a 100 compreso
 for (i = 1; i <= 100; i++) {
     // condizione che stampa FizzBuzz per i numeri multipli di 3 e 5, utilizzato operatore logico && (AND) restituisce true se entrambi gli operatori sono veri
