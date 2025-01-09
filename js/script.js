@@ -182,25 +182,51 @@ reset_btn.addEventListener('click', function () {
 
 // Bottone che genera la griglia
 let grid_generate_btn = document.getElementById('grid-start');
+console.log(grid_generate_btn);
 // Bottone che resetta la griglia
 let grid_reset_btn = document.getElementById('grid-reset');
+console.log(grid_reset_btn);
 // Elemento griglia che conterrà le celle per ogni numero
 let grid = document.getElementById('grid');
+console.log(grid);
 
-// Con un ciclo for genero dei numeri da 1 a 100 compreso
-for (i = 1; i <= 100; i++) {
-    // condizione che stampa FizzBuzz per i numeri multipli di 3 e 5, utilizzato operatore logico && (AND) restituisce true se entrambi gli operatori sono veri
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log(`${i} FizzBuzz`);
-        // condizione che stampa Fizz per i multipli di 3
-    } else if (i % 3 === 0) {
-        console.log(`${i} Fizz`);
-        // condizione che stampa Fizz per i multipli di 5
-    } else if (i % 5 === 0) {
-        console.log(`${i} Buzz`);
-        // altrimenti stampa solo il numero se non soddisfa le precedenti condizioni
-    } else {
-        console.log(i);
-    }
-};
+// metto il bottone che genera la griglia in attesa di un evento click, al suo interno la logica per il funzionamento di FizzBuzz
+grid_generate_btn.addEventListener('click', function () {
+    // svuoto la griglia prima di generare nuovi elementi 
+    grid.innerHTML = '';
+    // Con un ciclo for genero dei numeri da 1 a 100 compreso
+    for (i = 1; i <= 100; i++) {
+        // creo degli elemeti div
+        let square = document.createElement('div');
+        // assegno agli elementi creati dinamicamente nel DOM la classe square
+        square.classList.add('square');
+        // aggiungo alla griglia nel dom gli elementi div con classe square creati
+        grid.appendChild(square);
+        // condizione che stampa FizzBuzz per i numeri multipli di 3 e 5, utilizzato operatore logico && (AND) restituisce true se entrambi gli operatori sono veri
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log(`${i} FizzBuzz`);
+            // condizione che stampa Fizz per i multipli di 3
+        } else if (i % 3 === 0) {
+            console.log(`${i} Fizz`);
+            // condizione che stampa Fizz per i multipli di 5
+        } else if (i % 5 === 0) {
+            console.log(`${i} Buzz`);
+            // altrimenti stampa solo il numero se non soddisfa le precedenti condizioni
+        } else {
+            console.log(i);
+        }
+    };
+});
+
+// Logica per il reset della griglia
+
+// metto il bottone di reset in attesa di un evento click 
+grid_reset_btn.addEventListener('click', function () {
+    grid.innerHTML = '';
+});
+
+
+
+
+
 
