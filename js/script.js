@@ -204,15 +204,28 @@ grid_generate_btn.addEventListener('click', function () {
         grid.appendChild(square);
         // condizione che stampa FizzBuzz per i numeri multipli di 3 e 5, utilizzato operatore logico && (AND) restituisce true se entrambi gli operatori sono veri
         if (i % 3 === 0 && i % 5 === 0) {
+            // inietto con la proprietà innerText la stringa FizzBuzz per i multipli di 3 e 5
+            square.innerText = 'FizzBuzz';
+            // aggiungo all'elemento square una classe css
+            square.classList.add('fizzbuzz');
             console.log(`${i} FizzBuzz`);
             // condizione che stampa Fizz per i multipli di 3
         } else if (i % 3 === 0) {
+            // inietto con la proprietà innerText la stringa Fizz per i multipli di 3
+            square.innerText = 'Fizz';
+            // aggiungo all'elemento square una classe css
+            square.classList.add('fizz');
             console.log(`${i} Fizz`);
             // condizione che stampa Fizz per i multipli di 5
         } else if (i % 5 === 0) {
+            // inietto con la proprietà innerText la stringa Fizz per i multipli di 5
+            square.innerText = 'Buzz';
+            // aggiungo all'elemento square una classe css
+            square.classList.add('buzz');
             console.log(`${i} Buzz`);
             // altrimenti stampa solo il numero se non soddisfa le precedenti condizioni
         } else {
+            square.innerText = `${i}`
             console.log(i);
         }
     };

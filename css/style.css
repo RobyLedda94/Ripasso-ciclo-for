@@ -38,3 +38,16 @@
     text-align: center;
     border: 1px solid black;
 }
+
+
+.fizzbuzz {
+    background-color: gold;
+}
+
+.fizz {
+    background-color: lightblue;
+}
+
+.buzz {
+    background-color: lightgreen;
+}
